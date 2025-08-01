@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account - The Worx</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <div class="logo">
+                <h1><a href="index.html" style="color: inherit; text-decoration: none;">THE WORX</a></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="faqs.html">FAQs</a></li>
+                    <li><a href="account.html" class="active">Account</a></li>
+                </ul>
+            </nav>
+            <div class="social-icons">
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </header>
+
+        <!-- Account Section -->
+        <section class="account-section">
+            <div class="account-container">
+                <!-- Login/Register Toggle -->
+                <div class="auth-toggle" id="authToggle">
+                    <button class="toggle-btn active" onclick="showLogin()">Login</button>
+                    <button class="toggle-btn" onclick="showRegister()">Register</button>
+                </div>
+
+                <!-- Login Form -->
+                <div class="auth-form" id="loginForm">
+                    <h2>Welcome Back</h2>
+                    <form onsubmit="handleLogin(event)">
+                        <div class="form-group">
+                            <label for="login-email">Email</label>
+                            <input type="email" id="login-email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="login-password">Password</label>
+                            <input type="password" id="login-password" name="password" required>
+                        </div>
+                        <div class="form-group remember-me">
+                            <label>
+                                <input type="checkbox" name="remember"> Remember me
+                            </label>
+                            <a href="#" class="forgot-link">Forgot password?</a>
+                        </div>
+                        <button type="submit" class="submit-btn">Login</button>
+                    </form>
+                </div>
+
+                <!-- Register Form -->
+                <div class="auth-form" id="registerForm" style="display: none;">
+                    <h2>Create Account</h2>
+                    <form onsubmit="handleRegister(event)">
+                        <div class="form-group">
+                            <label for="register-name">Full Name</label>
+                            <input type="text" id="register-name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="register-email">Email</label>
+                            <input type="email" id="register-email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="register-phone">Phone Number</label>
+                            <input type="tel" id="register-phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="register-password">Password</label>
+                            <input type="password" id="register-password" name="password" required minlength="8">
+                        </div>
+                        <div class="form-group">
+                            <label for="register-confirm">Confirm Password</label>
+                            <input type="password" id="register-confirm" name="confirm" required minlength="8">
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" name="terms" required> I agree to the Terms & Conditions
+                            </label>
+                        </div>
+                        <button type="submit" class="submit-btn">Create Account</button>
+                    </form>
+                </div>
+
+                <!-- Profile Section (shown when logged in) -->
+                <div class="profile-section" id="profileSection" style="display: none;">
+                    <h2>My Profile</h2>
+                    <div class="profile-info">
+                        <div class="profile-header">
+                            <div class="profile-avatar">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="profile-details">
+                                <h3 id="profileName">John Doe</h3>
+                                <p id="profileEmail">john@example.com</p>
+                                <p class="member-since">Member since: <span id="memberSince">January 2025</span></p>
+                            </div>
+                        </div>
+
+                        <div class="profile-tabs">
+                            <button class="tab-btn active" onclick="showTab('bookings')">My Bookings</button>
+                            <button class="tab-btn" onclick="showTab('membership')">Membership</button>
+                            <button class="tab-btn" onclick="showTab('settings')">Settings</button>
+                        </div>
+
+                        <div class="tab-content" id="bookingsTab">
+                            <h3>My Bookings</h3>
+                            <div class="bookings-list">
+                                <div class="booking-item">
+                                    <div class="booking-date">
+                                        <span class="day">1</span>
+                                        <span class="month">Jul</span>
+                                    </div>
+                                    <div class="booking-details">
+                                        <h4>Hot Desk - Full Day</h4>
+                                        <p>9:00 AM - 5:00 PM</p>
+                                    </div>
+                                    <div class="booking-status confirmed">Confirmed</div>
+                                </div>
+                                <div class="booking-item">
+                                    <div class="booking-date">
+                                        <span class="day">26</span>
+                                        <span class="month">Jul</span>
+                                    </div>
+                                    <div class="booking-details">
+                                        <h4>Meeting Room A</h4>
+                                        <p>2:00 PM - 4:00 PM</p>
+                                    </div>
+                                    <div class="booking-status pending">Pending</div>
+                                </div>
+                            </div>
+                            <button class="btn-secondary" onclick="window.location.href='services.html'">New Booking</button>
+                        </div>
+
+                        <div class="tab-content" id="membershipTab" style="display: none;">
+                            <h3>Membership Details</h3>
+                            <div class="membership-info">
+                                <div class="membership-card">
+                                    <h4>Current Plan</h4>
+                                    <p class="plan-name">Hot Desk Monthly</p>
+                                    <p class="plan-price">$1000/month</p>
+                                    <p class="next-billing">Next billing: August 1, 2025</p>
+                                </div>
+                                <button class="btn-secondary">Upgrade Plan</button>
+                                <button class="btn-outline">Cancel Membership</button>
+                            </div>
+                        </div>
+
+                        <div class="tab-content" id="settingsTab" style="display: none;">
+                            <h3>Account Settings</h3>
+                            <form class="settings-form">
+                                <div class="form-group">
+                                    <label for="settings-name">Full Name</label>
+                                    <input type="text" id="settings-name" value="John Doe">
+                                </div>
+                                <div class="form-group">
+                                    <label for="settings-email">Email</label>
+                                    <input type="email" id="settings-email" value="john@example.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="settings-phone">Phone</label>
+                                    <input type="tel" id="settings-phone" value="+1 234 567 8900">
+                                </div>
+                                <button type="submit" class="submit-btn">Save Changes</button>
+                            </form>
+                            <div class="danger-zone">
+                                <h4>Danger Zone</h4>
+                                <button class="btn-danger" onclick="handleLogout()">Logout</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2025 The Worx. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <script src="scripts.js"></script>
+    <script src="account.js"></script>
+</body>
+</html>

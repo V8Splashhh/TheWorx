@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs - The Worx</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <div class="logo">
+                <h1><a href="index.html" style="color: inherit; text-decoration: none;">THE WORX</a></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="faqs.html" class="active">FAQs</a></li>
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+            </nav>
+            <div class="social-icons">
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </header>
+
+        <!-- FAQs Hero -->
+        <section class="page-hero">
+            <h2>Frequently Asked Questions</h2>
+            <p>Everything you need to know about The Worx</p>
+        </section>
+
+        <!-- FAQ Categories -->
+        <section class="faq-section">
+            <div class="content-wrapper">
+                <div class="faq-categories">
+                    <button class="category-btn active" onclick="showCategory('general')">General</button>
+                    <button class="category-btn" onclick="showCategory('membership')">Membership</button>
+                    <button class="category-btn" onclick="showCategory('facilities')">Facilities</button>
+                    <button class="category-btn" onclick="showCategory('booking')">Booking</button>
+                </div>
+
+                <!-- General FAQs -->
+                <div class="faq-content" id="general">
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <h3>What is The Worx?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>The Worx is a coworking space in Port of Spain that fosters innovation and collaboration among professionals. Our space brings people together, is rooted in trust and collaboration, and allows people to interact successfully and grow together.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <h3>What are your operating hours?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We are open from 7:00 AM to 7:00 PM every day. 24/7 access for members who require it will be available in the future</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <h3>Where are you located?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>74 Long Circular Road in the CIBC Building. You must check in with secuirty for parking spaces and guidance through the building.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <h3>Can I tour the space before joining?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Absolutely! We encourage prospective members to visit and experience The Worx firsthand. Book a tour through our contact form or call us to schedule a visit at your convenience.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Membership FAQs -->
+                <div class="faq-content" id="membership" style="display: none;">
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <h3>What membership options are available?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We offer Day Passes, Hot Desk memberships, Dedicated Desk memberships, and Private Office spaces. Each tier includes different amenities and access levels. Visit our Services page for detailed pricing and features.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <h3>Can I change my membership plan?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, you can upgrade or downgrade your membership at any time. Changes take effect at the start of your next billing cycle. Contact our member services team to make changes to your plan.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <h3>Is there a contract or commitment period?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Our memberships are month-to-month with no long-term contracts required. We also offer annual plans with a 15% discount for those who prefer to commit for a year.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <h3>What's your cancellation policy?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>You can cancel your membership anytime with 30 days notice. Simply notify us through your member portal or email, and your membership will end at the next billing cycle.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Facilities FAQs -->
+                <div class="faq-content" id="facilities" style="display: none;">
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <h3>What amenities are included?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>All memberships include high-speed Wi-Fi, unlimited coffee and tea, printing services (limits vary by plan), access to common areas, kitchen facilities, and phone booths. Higher-tier plans include additional perks like meeting room credits and 24/7 access.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <h3>Is parking available?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, we have parking available. Day pass holders can use hourly parking at discounted rates. Monthly members can add a reserved parking spot to their membership for an additional fee.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <h3>Do you have private phone booths?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, we have several soundproof phone booths available for private calls and video conferences. These are available on a first-come, first-served basis for all members.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <h3>Can I receive mail at The Worx?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Dedicated desk and private office members can receive mail at our address. We also offer virtual office services for those who need a business address without physical workspace.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Booking FAQs -->
+                <div class="faq-content" id="booking" style="display: none;">
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <h3>How do I book a meeting room?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Meeting rooms can be booked through your member portal or on our Services page. Select your preferred room, date, and time. Bookings can be made up to 30 days in advance.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <h3>What's the cancellation policy for room bookings?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Meeting room bookings can be cancelled up to 24 hours before the scheduled time for a full refund or credit. Cancellations made less than 24 hours in advance will be charged 50% of the booking fee.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <h3>Can non-members book meeting rooms?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, meeting rooms are available to non-members at standard rates. Members receive discounted rates and some plans include free meeting room hours each month.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <h3>Do you offer catering for meetings?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, we partner with local cafes and restaurants to provide catering options for your meetings. Options range from coffee and pastries to full lunch spreads. Order at least 48 hours in advance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Support -->
+        <section class="contact-support">
+            <div class="content-wrapper">
+                <h2>Still Have Questions?</h2>
+                <p>Our support team is here to help</p>
+                
+                <div class="contact-options">
+                    <div class="contact-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email Us</h3>
+                        <p>Get a response within 24 hours</p>
+                        <a href="mailto:support@theworx.com">support@theworx.com</a>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <i class="fas fa-phone"></i>
+                        <h3>Call Us</h3>
+                        <p>Mon-Fri, 9AM-5PM</p>
+                        <a href="tel:+1234567890">+1 (868) 281-0830</a>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <i class="fas fa-comments"></i>
+                        <h3>Live Chat</h3>
+                        <p>Instant support during business hours</p>
+                        <button class="chat-btn" onclick="showToast('💬 Chat feature coming soon!', 'info')">Start Chat</button>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-section">
+                    <h3>Send Us a Message</h3>
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contact-name">Name</label>
+                                <input type="text" id="contact-name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-email">Email</label>
+                                <input type="email" id="contact-email" name="email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-subject">Subject</label>
+                            <input type="text" id="contact-subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-message">Message</label>
+                            <textarea id="contact-message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent Reviews -->
+        <section class="faq-reviews">
+            <div class="content-wrapper">
+                <h2>What Our Members Say</h2>
+                <div class="reviews-scroll">
+                    <div class="review-card">
+                        <div class="review-header">
+                            <h4>Alex Thompson</h4>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                        <p>"The Worx has everything I need as a freelancer. Great community, excellent facilities, and the coffee is amazing!"</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-header">
+                            <h4>Maria Garcia</h4>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                        <p>"Best coworking space in the city! The networking events have been invaluable for growing my business."</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-header">
+                            <h4>David Kim</h4>
+                            <div class="stars">★★★★☆</div>
+                        </div>
+                        <p>"Professional environment with all the amenities. The only improvement would be extended weekend hours."</p>
+                    </div>
+                </div>
+                <button class="view-all-btn" onclick="window.location.href='index.html#reviews'">View All Reviews</button>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2025 The Worx. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <script src="scripts.js"></script>
+    <script src="faqs.js"></script>
+</body>
+</html>

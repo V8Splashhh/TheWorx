@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Worx - A Coworking Space for Entrepreneurs</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <div class="logo">
+                <h1>THE WORX</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="faqs.html">FAQs</a></li>
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+            </nav>
+            <div class="social-icons">
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h2>A coworking space for <span class="highlight">entrepreneurs</span></h2>
+            </div>
+            <div class="signup-container">
+                <div class="signup-box">
+                    <h3>Sign Up Now!</h3>
+                    <p>The Worx is more than just a coworking space. It's a hub for innovation and collaboration, a place where professionals can come together, share ideas, and grow.</p>
+                    <p>The Worx is open to the public, and we're welcoming in our first members. Sign up below and we'll be in touch!</p>
+                    <button class="signup-btn" onclick="openBookingModal()">sign up now</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Welcome Section -->
+        <section class="welcome">
+            <div class="welcome-content">
+                <div class="welcome-logo">
+                    <div class="x-logo">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                            <path d="M50 0 L70 20 L50 40 L30 20 Z" fill="#d9e021" />
+                            <path d="M20 30 L40 50 L20 70 L0 50 Z" fill="#d9e021" />
+                            <path d="M80 30 L100 50 L80 70 L60 50 Z" fill="#d9e021" />
+                            <path d="M50 60 L70 80 L50 100 L30 80 Z" fill="#d9e021" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="welcome-text">
+                    <h2>Welcome to The Worx – a space that brings people together, is rooted in trust and collaboration, and allows people to interact successfully and grow together.</h2>
+                    <button class="signup-btn" onclick="openBookingModal()">sign up now</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section id="reviews" class="reviews">
+            <div class="reviews-container">
+                <h2>What Our Members Say</h2>
+                <div class="reviews-grid" id="reviewsGrid">
+                    <!-- Reviews will be dynamically added here -->
+                </div>
+                <button class="add-review-btn" onclick="openReviewModal()">Leave a Review</button>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2025 The Worx. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('bookingModal')">&times;</span>
+            <h2>Book Your Space</h2>
+            <form id="bookingForm">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="date">Preferred Date</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="time">Preferred Time</label>
+                    <input type="time" id="time" name="time" required>
+                </div>
+                <div class="form-group">
+                    <label for="space-type">Space Type</label>
+                    <select id="space-type" name="space-type" required>
+                        <option value="">Select a space</option>
+                        <option value="hot-desk">Hot Desk</option>
+                        <option value="dedicated-desk">Dedicated Desk</option>
+                        <option value="private-office">Private Office</option>
+                        <option value="meeting-room">Meeting Room</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="duration">Duration</label>
+                    <select id="duration" name="duration" required>
+                        <option value="">Select duration</option>
+                        <option value="hourly">Hourly</option>
+                        <option value="daily">Daily</option>
+                        <option value="weekly">Weekly</option>
+                        <option value="monthly">Monthly</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Additional Information</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Submit Booking</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Review Modal -->
+    <div id="reviewModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('reviewModal')">&times;</span>
+            <h2>Leave a Review</h2>
+            <form id="reviewForm">
+                <div class="form-group">
+                    <label for="reviewer-name">Your Name</label>
+                    <input type="text" id="reviewer-name" name="reviewer-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="reviewer-email">Your Email</label>
+                    <input type="email" id="reviewer-email" name="reviewer-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="rating">Rating</label>
+                    <div class="star-rating">
+                        <input type="radio" id="star5" name="rating" value="5" required>
+                        <label for="star5">★</label>
+                        <input type="radio" id="star4" name="rating" value="4">
+                        <label for="star4">★</label>
+                        <input type="radio" id="star3" name="rating" value="3">
+                        <label for="star3">★</label>
+                        <input type="radio" id="star2" name="rating" value="2">
+                        <label for="star2">★</label>
+                        <input type="radio" id="star1" name="rating" value="1">
+                        <label for="star1">★</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="review-text">Your Review</label>
+                    <textarea id="review-text" name="review-text" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Submit Review</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
